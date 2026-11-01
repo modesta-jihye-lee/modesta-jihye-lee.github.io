@@ -1,0 +1,225 @@
+/* 앱별 개인정보 처리방침·고객 지원 페이지 공용 스타일.
+   바탕·글꼴·레이아웃은 이음결 홈페이지와 같고, 포인트 색만 앱마다 다르다.
+   <html data-app="gridpaper | yeonri | dorong"> 로 앱을 고른다. */
+
+:root {
+  --bg: #F1EFE6;
+  --surface: #FAF8EF;
+  --text: #1E2420;
+  --text-muted: #5B6158;
+  --line: #DAD5C6;
+  /* 앱 포인트 색 (기본값은 이음결 초록) */
+  --accent: #2F6E5C;
+  --accent-soft: #E4ECE7;
+}
+
+/* 모눈: 연필 같은 먹색 */
+:root[data-app="gridpaper"] { --accent: #4A4944; --accent-soft: #E6E3DA; }
+/* 연리: 연리 앱 초록 */
+:root[data-app="yeonri"]    { --accent: #46614C; --accent-soft: #E4EBE2; }
+/* 도롱마을: 이끼 올리브 */
+:root[data-app="dorong"]    { --accent: #5E6B43; --accent-soft: #E7EBDA; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161A13;
+    --surface: #1D2318;
+    --text: #EDE9DD;
+    --text-muted: #ABA99A;
+    --line: #2E362A;
+    --accent: #6FB59E;
+    --accent-soft: #23332C;
+  }
+  :root[data-app="gridpaper"]:not([data-theme="light"]) { --accent: #CFCBC0; --accent-soft: #2B2C27; }
+  :root[data-app="yeonri"]:not([data-theme="light"])    { --accent: #A8C09B; --accent-soft: #2C3A2C; }
+  :root[data-app="dorong"]:not([data-theme="light"])    { --accent: #B9C496; --accent-soft: #2E3326; }
+}
+
+:root[data-theme="dark"] {
+  --bg: #161A13;
+  --surface: #1D2318;
+  --text: #EDE9DD;
+  --text-muted: #ABA99A;
+  --line: #2E362A;
+  --accent: #6FB59E;
+  --accent-soft: #23332C;
+}
+:root[data-theme="dark"][data-app="gridpaper"] { --accent: #CFCBC0; --accent-soft: #2B2C27; }
+:root[data-theme="dark"][data-app="yeonri"]    { --accent: #A8C09B; --accent-soft: #2C3A2C; }
+:root[data-theme="dark"][data-app="dorong"]    { --accent: #B9C496; --accent-soft: #2E3326; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Gowun Dodum", "Apple SD Gothic Neo", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--accent-soft); }
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 96px;
+}
+
+/* 맨 위: 홈 링크 + 언어 전환 */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 48px;
+  font-size: 0.88rem;
+}
+.topbar .home {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+}
+.topbar .home:hover, .topbar .home:focus-visible { color: var(--text); }
+
+.lang { display: flex; gap: 4px; }
+.lang a {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+.lang a:hover, .lang a:focus-visible { color: var(--text); }
+.lang a[aria-current="true"] { background: var(--accent-soft); color: var(--accent); }
+
+/* 앱 이름 라벨 */
+.app-label {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+h1, h2, h3 {
+  font-family: "Gowun Batang", "Noto Serif KR", serif;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 1.85rem;
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 2.6em 0 0.6em;
+  padding-top: 1.1em;
+  border-top: 1px solid var(--line);
+}
+
+h3 {
+  font-size: 1.02rem;
+  margin: 1.9em 0 0.3em;
+}
+h3 + p { margin-top: 0; }
+
+p, li { margin: 0 0 1em; }
+ul { padding-left: 1.2em; margin: 0 0 1em; }
+li { margin: 0.35em 0; }
+strong { font-weight: 700; }
+
+a { color: var(--accent); text-decoration-color: var(--line); text-underline-offset: 3px; }
+a:hover, a:focus-visible { text-decoration-color: var(--accent); }
+
+.meta {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin: 0 0 2px;
+}
+
+/* 처리방침 ↔ 고객 지원 이동 */
+.doc-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 22px 0 32px;
+}
+.doc-tabs a {
+  font-size: 0.86rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 4px 14px;
+}
+.doc-tabs a:hover, .doc-tabs a:focus-visible { color: var(--accent); border-color: var(--accent); }
+.doc-tabs a[aria-current="page"] {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: transparent;
+}
+
+.lede { margin: 32px 0 0; }
+
+.callout {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 32px 0 0;
+}
+.callout .label {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 6px;
+}
+.callout p:last-child { margin-bottom: 0; }
+[lang="ko"] .callout .label { font-family: inherit; letter-spacing: 0; font-size: 0.8rem; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 8px 0 1em;
+}
+th, td {
+  border-top: 1px solid var(--line);
+  padding: 9px 8px 9px 0;
+  text-align: left;
+  vertical-align: top;
+}
+th { font-weight: 700; color: var(--text-muted); font-size: 0.85rem; }
+tr:last-child td { border-bottom: 1px solid var(--line); }
+
+/* 언어 전환이 없을 때(자바스크립트 꺼짐)만 보이는 구분선 */
+hr.divider { border: none; border-top: 1px solid var(--line); margin: 5em 0 3em; }
+html[data-lang] hr.divider { display: none; }
+
+.site-footer {
+  margin-top: 64px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.site-footer a { color: var(--text-muted); }

@@ -1,78 +1,48 @@
-<!DOCTYPE html>
-<html lang="ko" data-title-ko="모눈 개인정보 처리방침" data-title-en="Gridpaper Privacy Policy">
+<!doctype html>
+<html lang="ko" data-app="gridpaper" data-title-ko="모눈 개인정보 처리방침" data-title-en="Gridpaper Privacy Policy">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>모눈 개인정보 처리방침 · Gridpaper Privacy Policy</title>
 <script src="/lang.js?v=1"></script>
-<style>
-  :root {
-    color-scheme: light dark;
-    --paper: #FAF8F5;
-    --ink: #33322E;
-    --ink-secondary: #6B6960;
-    --rule: #33322E22;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper: #1B1B19;
-      --ink: #E6E3DC;
-      --ink-secondary: #9A978E;
-      --rule: #E6E3DC22;
-    }
-  }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", Roboto, sans-serif;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 40px 20px 96px;
-    line-height: 1.75;
-    color: var(--ink);
-    background: var(--paper);
-    word-break: keep-all;
-  }
-  h1 { font-size: 1.55rem; line-height: 1.4; margin-bottom: 0.2em; }
-  h2 { font-size: 1.1rem; margin-top: 2.4em; padding-top: 0.6em; border-top: 1px solid var(--rule); }
-  p, li { font-size: 1rem; }
-  ul { padding-left: 1.2em; }
-  li { margin: 0.4em 0; }
-  a { color: inherit; text-decoration-color: var(--ink-secondary); text-underline-offset: 3px; }
-  .muted { color: var(--ink-secondary); font-size: 0.9rem; }
-  .lede { margin: 1.4em 0 0; }
-  hr.divider { border: none; border-top: 1px solid var(--rule); margin: 5em 0 3em; }
-  .lang-switch { font-size: 0.9rem; color: var(--ink-secondary); margin-bottom: 2.5em; }
-  .lang-switch a { text-decoration: none; padding: 2px 8px; border-radius: 99px; }
-  .lang-switch a[aria-current="true"] { color: var(--ink); background: var(--rule); }
-  html[data-lang] hr.divider { display: none; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/policy.css?v=1">
 </head>
 <body>
+<div class="wrap">
 
-<p class="lang-switch"><a href="#ko" data-set-lang="ko">한국어</a> · <a href="#en" data-set-lang="en">English</a></p>
+<header class="topbar">
+<a class="home" href="/"><span lang="ko">← 이음결</span><span lang="en">← IEUMGYEOL</span></a>
+<nav class="lang" aria-label="언어 · Language"><a href="#ko" data-set-lang="ko">한국어</a><a href="#en" data-set-lang="en">English</a></nav>
+</header>
 
-<div id="ko" lang="ko">
+<article id="ko" lang="ko">
+<p class="app-label">GRIDPAPER · 모눈</p>
 <h1>모눈 개인정보 처리방침</h1>
-<p class="muted">최종 업데이트: 2026년 10월 21일</p>
+<p class="meta">최종 업데이트: 2026년 10월 21일</p>
+<nav class="doc-tabs"><a href="./" aria-current="page">개인정보 처리방침</a><a href="support.html">고객 지원</a></nav>
 
 <p class="lede"><strong>모눈</strong>(이하 "본 앱")은 이용자가 기록한 내용을 <strong>개발자의 서버로 수집하거나 전송하지 않습니다.</strong> 본 앱에는 개발자가 운영하는 서버가 없고, 회원 가입이나 로그인 절차도 없습니다. 기록은 이용자의 기기와, 이용자 본인의 iCloud 계정 안에만 존재합니다.</p>
 
 <h2>1. 저장되는 정보</h2>
 <p>본 앱은 이용자가 직접 입력한 다음 정보를 저장합니다.</p>
 <ul>
-  <li>할 일, 반복 루틴, 태그</li>
-  <li>일정과 알림 시각</li>
-  <li>1년 목표와 세부 단계</li>
-  <li>일기 본문, 일기에 붙인 사진과 꾸미기 요소</li>
-  <li>앱 설정(테마, 언어, 달력 표시 색상 등)</li>
+<li>할 일, 반복 루틴, 태그</li>
+<li>일정과 알림 시각</li>
+<li>1년 목표와 세부 단계</li>
+<li>일기 본문, 일기에 붙인 사진과 꾸미기 요소</li>
+<li>앱 설정(테마, 언어, 달력 표시 색상 등)</li>
 </ul>
 <p>이 정보는 기기 내부의 앱 저장소에 보관되며, 개발자는 여기에 접근할 수 없습니다. 본 앱은 이름·이메일·전화번호·주소·결제 정보 등 이용자를 식별할 수 있는 정보를 별도로 요구하지 않습니다.</p>
 
 <h2>2. iCloud 동기화</h2>
 <p>본 앱은 Apple의 <strong>CloudKit 개인 데이터베이스(private database)</strong>를 이용해, 같은 Apple 계정으로 로그인한 이용자 본인의 기기들 사이에서 기록을 동기화합니다.</p>
 <ul>
-  <li>동기화된 데이터는 <strong>이용자 본인의 iCloud 계정 안</strong>에 저장됩니다. 개발자의 서버로 전송되지 않으며, 개발자는 그 내용을 열람할 수 없습니다.</li>
-  <li>이 저장 영역에 대한 처리는 Apple의 <a href="https://www.apple.com/legal/privacy/">개인정보 처리방침</a>을 따릅니다.</li>
-  <li>동기화를 원하지 않으시면 기기의 <em>설정 → (사용자 이름) → iCloud → 모든 앱 보기</em>에서 본 앱의 iCloud 사용을 끌 수 있습니다. 끄면 이후 기록은 해당 기기에만 저장됩니다.</li>
+<li>동기화된 데이터는 <strong>이용자 본인의 iCloud 계정 안</strong>에 저장됩니다. 개발자의 서버로 전송되지 않으며, 개발자는 그 내용을 열람할 수 없습니다.</li>
+<li>이 저장 영역에 대한 처리는 Apple의 <a href="https://www.apple.com/legal/privacy/">개인정보 처리방침</a>을 따릅니다.</li>
+<li>동기화를 원하지 않으시면 기기의 <em>설정 → (사용자 이름) → iCloud → 모든 앱 보기</em>에서 본 앱의 iCloud 사용을 끌 수 있습니다. 끄면 이후 기록은 해당 기기에만 저장됩니다.</li>
 </ul>
 
 <h2>3. 사진</h2>
@@ -89,9 +59,9 @@
 
 <h2>7. 보관 기간과 삭제</h2>
 <ul>
-  <li>기록은 이용자가 삭제하기 전까지 보관됩니다. 개발자가 별도로 보관하는 사본은 없습니다.</li>
-  <li>앱 안에서 항목을 삭제하면 기기에서 지워지고, iCloud 동기화가 켜져 있으면 다른 기기에서도 함께 지워집니다.</li>
-  <li>기기에서 앱을 삭제하면 해당 기기의 데이터가 삭제됩니다. iCloud에 남은 데이터는 <em>설정 → (사용자 이름) → iCloud → 저장 공간 관리</em>에서 삭제할 수 있습니다.</li>
+<li>기록은 이용자가 삭제하기 전까지 보관됩니다. 개발자가 별도로 보관하는 사본은 없습니다.</li>
+<li>앱 안에서 항목을 삭제하면 기기에서 지워지고, iCloud 동기화가 켜져 있으면 다른 기기에서도 함께 지워집니다.</li>
+<li>기기에서 앱을 삭제하면 해당 기기의 데이터가 삭제됩니다. iCloud에 남은 데이터는 <em>설정 → (사용자 이름) → iCloud → 저장 공간 관리</em>에서 삭제할 수 있습니다.</li>
 </ul>
 
 <h2>8. 이용자의 권리</h2>
@@ -105,34 +75,35 @@
 
 <h2>11. 문의</h2>
 <p>개인정보 보호 책임자: 이음결 (IEUMGYEOL)<br>개인정보 관련 문의: <a href="mailto:hello@ieumgyeol.com">hello@ieumgyeol.com</a></p>
-
-</div>
+</article>
 
 <hr class="divider">
 
-<div id="en" lang="en">
+<article id="en" lang="en">
+<p class="app-label">GRIDPAPER · 모눈</p>
 <h1>Gridpaper Privacy Policy</h1>
-<p class="muted">Last updated: October 21, 2026</p>
+<p class="meta">Last updated: October 21, 2026</p>
+<nav class="doc-tabs"><a href="./" aria-current="page">Privacy Policy</a><a href="support.html">Support</a></nav>
 
 <p class="lede"><strong>Gridpaper</strong> ("the App") does <strong>not collect or transmit your content to the developer's servers.</strong> The App has no developer-operated server, and there is no sign-up or login. What you write stays on your device and in your own iCloud account.</p>
 
 <h2>1. Information Stored</h2>
 <p>The App stores the information you enter:</p>
 <ul>
-  <li>To-dos, repeating routines, and tags</li>
-  <li>Events and reminder times</li>
-  <li>Yearly goals and their milestones</li>
-  <li>Diary entries, along with photos and decorations you place in them</li>
-  <li>App settings (theme, language, calendar mark color, and so on)</li>
+<li>To-dos, repeating routines, and tags</li>
+<li>Events and reminder times</li>
+<li>Yearly goals and their milestones</li>
+<li>Diary entries, along with photos and decorations you place in them</li>
+<li>App settings (theme, language, calendar mark color, and so on)</li>
 </ul>
 <p>This information is kept in the App's storage on your device, and the developer has no access to it. The App does not ask for your name, email address, phone number, postal address, or payment details.</p>
 
 <h2>2. iCloud Sync</h2>
 <p>The App uses Apple's <strong>CloudKit private database</strong> to sync your records across the devices signed in to your Apple Account.</p>
 <ul>
-  <li>Synced data is stored <strong>in your own iCloud account</strong>. It is not sent to the developer's servers, and the developer cannot read it.</li>
-  <li>Storage in iCloud is governed by Apple's <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a>.</li>
-  <li>If you prefer not to sync, you can turn off iCloud for the App in <em>Settings → (your name) → iCloud → See All Apps</em>. After that, new records stay on that device only.</li>
+<li>Synced data is stored <strong>in your own iCloud account</strong>. It is not sent to the developer's servers, and the developer cannot read it.</li>
+<li>Storage in iCloud is governed by Apple's <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a>.</li>
+<li>If you prefer not to sync, you can turn off iCloud for the App in <em>Settings → (your name) → iCloud → See All Apps</em>. After that, new records stay on that device only.</li>
 </ul>
 
 <h2>3. Photos</h2>
@@ -149,9 +120,9 @@
 
 <h2>7. Retention and Deletion</h2>
 <ul>
-  <li>Your records are kept until you delete them. The developer holds no separate copy.</li>
-  <li>Deleting an item in the App removes it from your device, and — if iCloud sync is on — from your other devices as well.</li>
-  <li>Deleting the App removes that device's data. Data remaining in iCloud can be removed under <em>Settings → (your name) → iCloud → Manage Account Storage</em>.</li>
+<li>Your records are kept until you delete them. The developer holds no separate copy.</li>
+<li>Deleting an item in the App removes it from your device, and — if iCloud sync is on — from your other devices as well.</li>
+<li>Deleting the App removes that device's data. Data remaining in iCloud can be removed under <em>Settings → (your name) → iCloud → Manage Account Storage</em>.</li>
 </ul>
 
 <h2>8. Your Rights</h2>
@@ -165,6 +136,12 @@
 
 <h2>11. Contact</h2>
 <p>Privacy contact: IEUMGYEOL (이음결)<br>Privacy inquiries: <a href="mailto:hello@ieumgyeol.com">hello@ieumgyeol.com</a></p>
+</article>
+
+<footer class="site-footer">
+<span>이음결 · IEUMGYEOL</span>
+<a href="mailto:hello@ieumgyeol.com">hello@ieumgyeol.com</a>
+</footer>
 
 </div>
 </body>
